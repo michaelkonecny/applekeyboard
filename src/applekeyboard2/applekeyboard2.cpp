@@ -139,6 +139,10 @@ int main()
     InterceptionKeyStroke stroke;
 
 //    raise_process_priority();
+	const wchar_t apple_aluminium_keyboard_iso2[] = L"HID\\VID_05AC&PID_0250&REV_0074&MI_00";
+
+    wchar_t hardware_id[500];
+
 
     context = interception_create_context();
 
@@ -147,11 +151,18 @@ int main()
 
     while (interception_receive(context, device = interception_wait(context), (InterceptionStroke *)&stroke, 1) > 0) {
 
-        substitute(stroke);
-
 //        std::cout << std::hex << stroke.state << "_" << stroke.code;
 
-        interception_send(context, device, (InterceptionStroke *)&stroke, 1);
+        size_t length = interception_get_hardware_id(context, device, hardware_id, sizeof(hardware_id));
+
+//        if(length > 0 && length < sizeof(hardware_id))
+//	        std::wcout << hardware_id << std::endl;
+
+		if (wcscmp(hardware_id, apple_aluminium_keyboard_iso2) == 0) {
+			substitute(stroke);
+		}
+		
+    	interception_send(context, device, (InterceptionStroke *)&stroke, 1);
 
 //        if (stroke.code == SCANCODE_ESC) break;
     }
