@@ -6,6 +6,7 @@
 #include <tchar.h>
 #include <iostream>
 #include <Interception/interception.h>
+#include <Windows.h>
 
 //int _tmain(int argc, _TCHAR* argv[])
 //{
@@ -131,8 +132,7 @@ void substitute(InterceptionKeyStroke& stroke)
 
 }
 
-
-int main()
+DWORD WINAPI interception_loop (LPVOID lpParam)
 {
     InterceptionContext context;
     InterceptionDevice device;
@@ -169,5 +169,6 @@ int main()
 
     interception_destroy_context(context);
 
-    return 0;
+    return ERROR_SUCCESS;
 }
+
