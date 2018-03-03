@@ -1,0 +1,13 @@
+bin/
+intermediate/
+x64/
+
+*.sdf
+*.opensdf
+*.suo
+*.opendb
+*.db
+*.user
+
+# Visual Studio cache
+.vs
