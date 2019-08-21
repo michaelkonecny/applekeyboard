@@ -18,12 +18,6 @@
     <ClInclude Include="include\applekeyboard2\applekeyboard2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h.del">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h.del">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\applekeyboard2\applekeyboard2.cpp">

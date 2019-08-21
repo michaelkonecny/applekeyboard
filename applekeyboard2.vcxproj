@@ -84,8 +84,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\applekeyboard2\applekeyboard2.h" />
-    <ClInclude Include="stdafx.h.del" />
-    <ClInclude Include="targetver.h.del" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\applekeyboard2\applekeyboard2.cpp" />
