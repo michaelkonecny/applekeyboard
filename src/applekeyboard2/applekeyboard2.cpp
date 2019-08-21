@@ -128,6 +128,8 @@ DWORD WINAPI interception_loop (LPVOID lpParam) // for service
     InterceptionKeyStroke stroke;
 
 //    raise_process_priority();
+
+	// todo add PIC 0220, 0221, 0222
 	const wchar_t apple_aluminium_keyboard_iso2[] = L"HID\\VID_05AC&PID_0250&REV_0074&MI_00";
 
     wchar_t hardware_id[500];
