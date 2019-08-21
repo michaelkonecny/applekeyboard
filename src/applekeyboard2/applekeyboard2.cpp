@@ -1,19 +1,7 @@
-// applekeyboard2.cpp : Defines the entry point for the console application.
-//
-
-//#include "stdafx.h"
-
 #include <tchar.h>
 #include <iostream>
 #include <Interception/interception.h>
 #include <Windows.h>
-
-//int _tmain(int argc, _TCHAR* argv[])
-//{
-//
-//
-//	return 0;
-//}
 
 enum ScanCode
 {
@@ -132,7 +120,8 @@ void substitute(InterceptionKeyStroke& stroke)
 
 }
 
-DWORD WINAPI interception_loop (LPVOID lpParam)
+//int main() // for debugging
+DWORD WINAPI interception_loop (LPVOID lpParam) // for service
 {
     InterceptionContext context;
     InterceptionDevice device;
