@@ -15,6 +15,8 @@ Mappings:
 
 These can be customized in code.
 
+Currently only the ISO2 version of the keyboard is recognised, however others could be added relatively easily in the code.
+
 ## Installation
 1) Install the [Interception](https://github.com/oblitum/Interception) driver by running 
 ```
